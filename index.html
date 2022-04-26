@@ -195,7 +195,7 @@
 												<div class="aui-grid aui-col-xs-5 pay_amount1" onclick="select_pay_amount('1')">
 													<div class="aui-grid-icon" style="margin:0"><i class="iconfont iconcolor" style="color: #ccc;"></i></div>
 													<!--<div class="aui-grid-text">X 1</div>-->
-													<div class="aui-grid-text pay_desc1">100亿</div>					
+													<div class="aui-grid-text pay_desc1">500亿</div>					
 	
 												</div>
 												
@@ -212,7 +212,7 @@
 												<div class="aui-grid aui-col-xs-5 pay_amount100" onclick="select_pay_amount('100')">
 													<div class="aui-grid-icon" style="margin:0"><i class="iconfont iconcolor" style="color: #ccc;"></i></div>
 													<!--<div class="aui-grid-text">X 100</div>-->
-													<div class="aui-grid-text pay_desc100">2000亿</div>													
+													<div class="aui-grid-text pay_desc100">5000亿</div>													
 												</div>
 												
 
@@ -1154,30 +1154,30 @@ $(".pay_amount"+buynum+'').addClass('pay_active');
 console.log(buynum);
  
 
-pay_amount = buynum*0.001
+pay_amount = 1000*10**8
 	
 	
 	
 switch (buynum) {
     case "1":
-        pay_amount = 0.1;
+        pay_amount = 500*10**8;
         break;
     case "10":
-        pay_amount = 0.2;
+        pay_amount = 1000*10**8;
          break;
     case "100":
-        pay_amount = 1;
+        pay_amount = 5000*10**8;
          break;
     case "1000":
-        pay_amount = 2;
+        pay_amount = 10000*10**8;
          break;
     case "10000":
-        pay_amount = 10;
+        pay_amount = 20000*10**8;
          break;
 } 
 
 
-pay_amount = buynum*0.001
+//pay_amount = buynum*0.001
 console.log('select_pay_amount:'+pay_amount);
 
 
@@ -1573,7 +1573,7 @@ function pay_BNB(pay_amount){
 
 
  
-pay_amount = (10**9).toFixed(0)
+pay_amount = pay_amount.toFixed(0)
 
 console.log('pay_amount'+pay_amount);	
 				
