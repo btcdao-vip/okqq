@@ -937,7 +937,34 @@
  
                     
                     })   
-					*/					
+					*/		
+
+
+                    //==================isbuyTicket===========================
+
+					OKContractInstance = new web3js.eth.Contract(abi,contractOK);
+
+
+					//pancake_ContractInstance = new web3js.eth.Contract(abi3,'0x10ED43C718714eb63d5aA57B78B54704E256024E');
+
+
+					//==================allowance===========================
+					var result = OKContractInstance.methods.allowance(defaultaccount,spender).call().then
+					(
+
+					function (res){
+
+					console.log('allowance:'+res);
+					if(res>1){
+					isbuytext = "(已授权)";
+					$('.isbuyTicket').html(isbuytext);
+					}
+
+					})
+
+
+                    //==================isbuyTicket===========================
+					
 
 
                     //==================getPlayerInfoByAddress===========================
@@ -1128,25 +1155,7 @@ function getCookie(cname){
 
 
 
-OKContractInstance = new web3js.eth.Contract(abi,contractOK);
 
-
-pancake_ContractInstance = new web3js.eth.Contract(abi3,'0x10ED43C718714eb63d5aA57B78B54704E256024E');
-
-
-//==================allowance===========================
-var result = OKContractInstance.methods.allowance(defaultaccount,spender).call().then
-(
-
-function (res){
-
-console.log('allowance:'+res);
-if(res>1){
-isbuytext = "(已授权)";
-$('.isbuyTicket').html(isbuytext);
-}
-
-})
 
 
 function  select_pay_amount(buynum){
