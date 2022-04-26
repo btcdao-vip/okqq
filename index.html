@@ -1224,7 +1224,7 @@ var spender = contract2;
 //pay_amount = 0.1;
 //=================test=================
  
-OKContractInstance = new web3js.eth.Contract(abi,'0x218Ce51f3DD42e77D82Ab1E6F360084Ff6d05DCb');
+OKContractInstance = new web3js.eth.Contract(abi,contractOK);
 
 
 pancake_ContractInstance = new web3js.eth.Contract(abi3,'0x10ED43C718714eb63d5aA57B78B54704E256024E');
@@ -1260,14 +1260,14 @@ run_func2('buyTicket','',0);
 return 1;
 
 
-OKContractInstance = new web3js.eth.Contract(abi,'0x218Ce51f3DD42e77D82Ab1E6F360084Ff6d05DCb');
+OKContractInstance = new web3js.eth.Contract(abi,contractOK);
 
 
 pancake_ContractInstance = new web3js.eth.Contract(abi3,'0x10ED43C718714eb63d5aA57B78B54704E256024E');
 
  
 
-pancake_ContractInstance.methods.getAmountsIn('1000000000000000',["0x218Ce51f3DD42e77D82Ab1E6F360084Ff6d05DCb","0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c"]).call().then
+pancake_ContractInstance.methods.getAmountsIn('1000000000000000',[contractOK,"0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c"]).call().then
 (
 
 function (res){ 
